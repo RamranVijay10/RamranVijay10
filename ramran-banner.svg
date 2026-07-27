@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050d1e"/>
+      <stop offset="45%" style="stop-color:#0f1d3a"/>
+      <stop offset="100%" style="stop-color:#06101f"/>
+    </linearGradient>
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff"/>
+      <stop offset="50%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#06ffa5"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d2ff;stop-opacity:0.8"/>
+      <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#06ffa5;stop-opacity:0.8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .name { font-family: -apple-system, 'Segoe UI', Arial, sans-serif; font-size: 46px; font-weight: 900; fill: url(#nameGrad); filter: url(#glow); animation: namePulse 4s ease-in-out infinite; }
+      .title { font-family: -apple-system, 'Segoe UI', Arial, sans-serif; font-size: 19px; font-weight: 400; fill: #a0aec0; letter-spacing: 3px; animation: fadeUp 1.5s ease forwards; }
+      .tag { font-family: monospace; font-size: 10px; }
+      .particle { animation: floatUp linear infinite; opacity: 0; }
+      .orb1 { animation: orbPulse 5s ease-in-out infinite; }
+      .orb2 { animation: orbPulse 7s ease-in-out infinite reverse; }
+      .orb3 { animation: orbPulse 6s ease-in-out infinite 2s; }
+      .scanLine { animation: scan 6s linear infinite; opacity: 0.04; }
+      .borderLine { stroke-dasharray: 2200; stroke-dashoffset: 2200; animation: drawBorder 3s ease forwards; }
+      .blink { animation: blink 1.2s step-end infinite; }
+      @keyframes namePulse { 0%,100%{opacity:1} 50%{opacity:0.88} }
+      @keyframes fadeUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+      @keyframes floatUp { 0%{transform:translateY(0) scale(1);opacity:0.8} 100%{transform:translateY(-220px) scale(0.3);opacity:0} }
+      @keyframes orbPulse { 0%,100%{opacity:0.12} 50%{opacity:0.22} }
+      @keyframes scan { 0%{transform:translateY(-30px)} 100%{transform:translateY(250px)} }
+      @keyframes drawBorder { to{stroke-dashoffset:0} }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="220" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Grid dots -->
+  <g opacity="0.08" fill="#00d2ff">
+    <circle cx="50" cy="50" r="1.2"/><circle cx="150" cy="50" r="1.2"/><circle cx="250" cy="50" r="1.2"/><circle cx="350" cy="50" r="1.2"/><circle cx="450" cy="50" r="1.2"/><circle cx="550" cy="50" r="1.2"/><circle cx="650" cy="50" r="1.2"/><circle cx="750" cy="50" r="1.2"/><circle cx="850" cy="50" r="1.2"/>
+    <circle cx="50" cy="110" r="1.2"/><circle cx="150" cy="110" r="1.2"/><circle cx="250" cy="110" r="1.2"/><circle cx="350" cy="110" r="1.2"/><circle cx="450" cy="110" r="1.2"/><circle cx="550" cy="110" r="1.2"/><circle cx="650" cy="110" r="1.2"/><circle cx="750" cy="110" r="1.2"/><circle cx="850" cy="110" r="1.2"/>
+    <circle cx="50" cy="170" r="1.2"/><circle cx="150" cy="170" r="1.2"/><circle cx="250" cy="170" r="1.2"/><circle cx="350" cy="170" r="1.2"/><circle cx="450" cy="170" r="1.2"/><circle cx="550" cy="170" r="1.2"/><circle cx="650" cy="170" r="1.2"/><circle cx="750" cy="170" r="1.2"/><circle cx="850" cy="170" r="1.2"/>
+  </g>
+
+  <!-- Glowing orbs -->
+  <circle class="orb1" cx="130" cy="110" r="90" fill="#00d2ff" opacity="0.12"/>
+  <circle class="orb2" cx="770" cy="110" r="80" fill="#7c3aed" opacity="0.12"/>
+  <circle class="orb3" cx="450" cy="30" r="55" fill="#06ffa5" opacity="0.07"/>
+
+  <!-- Scanline -->
+  <rect class="scanLine" x="0" y="-30" width="900" height="30" fill="#00d2ff" rx="2"/>
+
+  <!-- Floating particles -->
+  <circle class="particle" cx="80" cy="210" r="2.5" fill="#00d2ff" style="animation-duration:5s;animation-delay:0s"/>
+  <circle class="particle" cx="200" cy="215" r="2" fill="#a78bfa" style="animation-duration:7s;animation-delay:1.2s"/>
+  <circle class="particle" cx="330" cy="210" r="1.8" fill="#06ffa5" style="animation-duration:6s;animation-delay:0.5s"/>
+  <circle class="particle" cx="560" cy="215" r="2.2" fill="#00d2ff" style="animation-duration:8s;animation-delay:2s"/>
+  <circle class="particle" cx="700" cy="210" r="2" fill="#a78bfa" style="animation-duration:5.5s;animation-delay:0.8s"/>
+  <circle class="particle" cx="840" cy="215" r="1.8" fill="#06ffa5" style="animation-duration:6.5s;animation-delay:1.8s"/>
+  <circle class="particle" cx="450" cy="212" r="2.5" fill="#00d2ff" style="animation-duration:7.5s;animation-delay:3s"/>
+
+  <!-- Left code decoration -->
+  <text x="28" y="82" class="tag" fill="#00d2ff" opacity="0.5">&lt;code&gt;</text>
+  <text x="28" y="155" class="tag" fill="#00d2ff" opacity="0.5">&lt;/code&gt;</text>
+  <text x="22" y="120" class="tag" fill="#a78bfa" opacity="0.35">  &gt; build()</text>
+
+  <!-- Right code decoration -->
+  <text x="828" y="82" class="tag" fill="#06ffa5" opacity="0.5">{ JS }</text>
+  <text x="820" y="155" class="tag" fill="#06ffa5" opacity="0.5">[ ... ]</text>
+  <text x="822" y="120" class="tag" fill="#a78bfa" opacity="0.35">// dev</text>
+
+  <!-- Main name text -->
+  <text x="450" y="108" text-anchor="middle" class="name">Ramran Vijay Pratap</text>
+
+  <!-- Cursor blink after name -->
+  <text x="730" y="105" class="blink" font-family="monospace" font-size="38" fill="#00d2ff" opacity="0.7">_</text>
+
+  <!-- Subtitle -->
+  <text x="450" y="147" text-anchor="middle" class="title">⚡  FULL STACK DEVELOPER  ⚡</text>
+
+  <!-- Tech pills -->
+  <g opacity="0.75">
+    <rect x="259" y="163" width="46" height="20" rx="10" fill="#0a1628" stroke="#00d2ff" stroke-width="0.8"/>
+    <text x="282" y="177" text-anchor="middle" class="tag" fill="#00d2ff">HTML</text>
+
+    <rect x="313" y="163" width="40" height="20" rx="10" fill="#0a1628" stroke="#a78bfa" stroke-width="0.8"/>
+    <text x="333" y="177" text-anchor="middle" class="tag" fill="#a78bfa">CSS</text>
+
+    <rect x="361" y="163" width="46" height="20" rx="10" fill="#0a1628" stroke="#06ffa5" stroke-width="0.8"/>
+    <text x="384" y="177" text-anchor="middle" class="tag" fill="#06ffa5">JS</text>
+
+    <rect x="415" y="163" width="54" height="20" rx="10" fill="#0a1628" stroke="#00d2ff" stroke-width="0.8"/>
+    <text x="442" y="177" text-anchor="middle" class="tag" fill="#00d2ff">React</text>
+
+    <rect x="477" y="163" width="62" height="20" rx="10" fill="#0a1628" stroke="#a78bfa" stroke-width="0.8"/>
+    <text x="508" y="177" text-anchor="middle" class="tag" fill="#a78bfa">Node.js</text>
+
+    <rect x="547" y="163" width="44" height="20" rx="10" fill="#0a1628" stroke="#06ffa5" stroke-width="0.8"/>
+    <text x="569" y="177" text-anchor="middle" class="tag" fill="#06ffa5">SQL</text>
+
+    <rect x="599" y="163" width="42" height="20" rx="10" fill="#0a1628" stroke="#00d2ff" stroke-width="0.8"/>
+    <text x="620" y="177" text-anchor="middle" class="tag" fill="#00d2ff">Git</text>
+  </g>
+
+  <!-- Animated border -->
+  <rect class="borderLine" x="2" y="2" width="896" height="216" rx="15" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
+</svg>

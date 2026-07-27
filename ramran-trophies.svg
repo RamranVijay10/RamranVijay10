@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="130" viewBox="0 0 860 130">
+  <defs>
+    <linearGradient id="bgT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700"/>
+      <stop offset="100%" style="stop-color:#ffa500"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0c0c0"/>
+      <stop offset="100%" style="stop-color:#a8a8a8"/>
+    </linearGradient>
+    <linearGradient id="bronzeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#cd7f32"/>
+      <stop offset="100%" style="stop-color:#a0522d"/>
+    </linearGradient>
+    <filter id="trophyGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .tText { font-family: -apple-system, 'Segoe UI', Arial, sans-serif; }
+      .trophyItem { animation: popIn 0.5s ease-out backwards; }
+      @keyframes popIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+      .shine { animation: shineAnim 3s ease-in-out infinite; }
+      @keyframes shineAnim { 0%,100%{opacity:0.8} 50%{opacity:1} }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="130" fill="url(#bgT)" rx="14"/>
+  <rect width="860" height="130" rx="14" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="20" y="26" class="tText" font-size="14" font-weight="700" fill="white">🏆 GitHub Trophies</text>
+  <line x1="20" y1="34" x2="840" y2="34" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Trophy 1: MultiLanguage -->
+  <g class="trophyItem shine" style="animation-delay:0s" transform="translate(15, 42)">
+    <rect width="110" height="72" rx="10" fill="#0a1628" stroke="#ffd700" stroke-width="1.2" opacity="0.9"/>
+    <text x="55" y="30" text-anchor="middle" font-size="26" fill="url(#goldGrad)" filter="url(#trophyGlow)">🏆</text>
+    <text x="55" y="50" text-anchor="middle" class="tText" font-size="8.5" fill="#ffd700" font-weight="600">MultiLanguage</text>
+    <text x="55" y="62" text-anchor="middle" class="tText" font-size="8" fill="#94a3b8">Gold  ★★★★★</text>
+  </g>
+
+  <!-- Trophy 2: Commits -->
+  <g class="trophyItem shine" style="animation-delay:0.15s" transform="translate(137, 42)">
+    <rect width="110" height="72" rx="10" fill="#0a1628" stroke="#ffd700" stroke-width="1.2" opacity="0.9"/>
+    <text x="55" y="30" text-anchor="middle" font-size="26" fill="url(#goldGrad)" filter="url(#trophyGlow)">🏆</text>
+    <text x="55" y="50" text-anchor="middle" class="tText" font-size="8.5" fill="#ffd700" font-weight="600">Total Commits</text>
+    <text x="55" y="62" text-anchor="middle" class="tText" font-size="8" fill="#94a3b8">Gold  ★★★★★</text>
+  </g>
+
+  <!-- Trophy 3: Repos -->
+  <g class="trophyItem shine" style="animation-delay:0.3s" transform="translate(259, 42)">
+    <rect width="110" height="72" rx="10" fill="#0a1628" stroke="#c0c0c0" stroke-width="1.2" opacity="0.9"/>
+    <text x="55" y="30" text-anchor="middle" font-size="26" fill="url(#silverGrad)" filter="url(#trophyGlow)">🥈</text>
+    <text x="55" y="50" text-anchor="middle" class="tText" font-size="8.5" fill="#c0c0c0" font-weight="600">Public Repos</text>
+    <text x="55" y="62" text-anchor="middle" class="tText" font-size="8" fill="#94a3b8">Silver ★★★★☆</text>
+  </g>
+
+  <!-- Trophy 4: Followers -->
+  <g class="trophyItem shine" style="animation-delay:0.45s" transform="translate(381, 42)">
+    <rect width="110" height="72" rx="10" fill="#0a1628" stroke="#c0c0c0" stroke-width="1.2" opacity="0.9"/>
+    <text x="55" y="30" text-anchor="middle" font-size="26" fill="url(#silverGrad)" filter="url(#trophyGlow)">🥈</text>
+    <text x="55" y="50" text-anchor="middle" class="tText" font-size="8.5" fill="#c0c0c0" font-weight="600">Followers</text>
+    <text x="55" y="62" text-anchor="middle" class="tText" font-size="8" fill="#94a3b8">Silver ★★★★☆</text>
+  </g>
+
+  <!-- Trophy 5: Stars -->
+  <g class="trophyItem shine" style="animation-delay:0.6s" transform="translate(503, 42)">
+    <rect width="110" height="72" rx="10" fill="#0a1628" stroke="#cd7f32" stroke-width="1.2" opacity="0.9"/>
+    <text x="55" y="30" text-anchor="middle" font-size="26" fill="url(#bronzeGrad)" filter="url(#trophyGlow)">🥉</text>
+    <text x="55" y="50" text-anchor="middle" class="tText" font-size="8.5" fill="#cd7f32" font-weight="600">Total Stars</text>
+    <text x="55" y="62" text-anchor="middle" class="tText" font-size="8" fill="#94a3b8">Bronze ★★★☆☆</text>
+  </g>
+
+  <!-- Trophy 6: Issues -->
+  <g class="trophyItem shine" style="animation-delay:0.75s" transform="translate(625, 42)">
+    <rect width="110" height="72" rx="10" fill="#0a1628" stroke="#cd7f32" stroke-width="1.2" opacity="0.9"/>
+    <text x="55" y="30" text-anchor="middle" font-size="26" fill="url(#bronzeGrad)" filter="url(#trophyGlow)">🥉</text>
+    <text x="55" y="50" text-anchor="middle" class="tText" font-size="8.5" fill="#cd7f32" font-weight="600">Issues Solved</text>
+    <text x="55" y="62" text-anchor="middle" class="tText" font-size="8" fill="#94a3b8">Bronze ★★★☆☆</text>
+  </g>
+
+  <!-- Trophy 7: PRs -->
+  <g class="trophyItem shine" style="animation-delay:0.9s" transform="translate(747, 42)">
+    <rect width="98" height="72" rx="10" fill="#0a1628" stroke="#00d2ff" stroke-width="1.2" opacity="0.9"/>
+    <text x="49" y="30" text-anchor="middle" font-size="26" fill="#00d2ff" filter="url(#trophyGlow)">🏅</text>
+    <text x="49" y="50" text-anchor="middle" class="tText" font-size="8.5" fill="#00d2ff" font-weight="600">Pull Requests</text>
+    <text x="49" y="62" text-anchor="middle" class="tText" font-size="8" fill="#94a3b8">Rising ★★☆☆☆</text>
+  </g>
+</svg>

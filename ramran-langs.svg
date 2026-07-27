@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="195" viewBox="0 0 400 195">
+  <defs>
+    <linearGradient id="bgL2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+    <style>
+      .lText { font-family: -apple-system, 'Segoe UI', Arial, sans-serif; }
+      .langBar { animation: growLang 1.5s ease-out forwards; transform-origin: left; }
+      @keyframes growLang { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="195" fill="url(#bgL2)" rx="14"/>
+  <rect width="400" height="195" rx="14" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="20" y="32" class="lText" font-size="15" font-weight="700" fill="white">🔥 Top Languages</text>
+  <text x="20" y="48" class="lText" font-size="10" fill="#64748b">by repository count</text>
+  <line x1="20" y1="58" x2="380" y2="58" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- JavaScript -->
+  <circle cx="32" cy="77" r="5" fill="#f7df1e"/>
+  <text x="44" y="82" class="lText" font-size="11" fill="#e2e8f0">JavaScript</text>
+  <rect x="160" y="71" width="180" height="12" rx="6" fill="#1e3a5f"/>
+  <rect class="langBar" x="160" y="71" width="162" height="12" rx="6" fill="#f7df1e" style="animation-delay:0s"/>
+  <text x="352" y="82" text-anchor="end" class="lText" font-size="11" fill="#f7df1e" font-weight="700">90%</text>
+
+  <!-- HTML -->
+  <circle cx="32" cy="107" r="5" fill="#e34c26"/>
+  <text x="44" y="112" class="lText" font-size="11" fill="#e2e8f0">HTML</text>
+  <rect x="160" y="101" width="180" height="12" rx="6" fill="#1e3a5f"/>
+  <rect class="langBar" x="160" y="101" width="144" height="12" rx="6" fill="#e34c26" style="animation-delay:0.2s"/>
+  <text x="352" y="112" text-anchor="end" class="lText" font-size="11" fill="#e34c26" font-weight="700">80%</text>
+
+  <!-- CSS -->
+  <circle cx="32" cy="137" r="5" fill="#264de4"/>
+  <text x="44" y="142" class="lText" font-size="11" fill="#e2e8f0">CSS</text>
+  <rect x="160" y="131" width="180" height="12" rx="6" fill="#1e3a5f"/>
+  <rect class="langBar" x="160" y="131" width="126" height="12" rx="6" fill="#264de4" style="animation-delay:0.4s"/>
+  <text x="352" y="142" text-anchor="end" class="lText" font-size="11" fill="#264de4" font-weight="700">70%</text>
+
+  <!-- TypeScript -->
+  <circle cx="32" cy="167" r="5" fill="#3178c6"/>
+  <text x="44" y="172" class="lText" font-size="11" fill="#e2e8f0">TypeScript</text>
+  <rect x="160" y="161" width="180" height="12" rx="6" fill="#1e3a5f"/>
+  <rect class="langBar" x="160" y="161" width="72" height="12" rx="6" fill="#3178c6" style="animation-delay:0.6s"/>
+  <text x="352" y="172" text-anchor="end" class="lText" font-size="11" fill="#3178c6" font-weight="700">40%</text>
+
+  <!-- Donut chart (right side decoration) -->
+  <!-- pie pieces as stroked circles -->
+  <circle cx="358" cy="105" r="0" fill="none"/>
+</svg>

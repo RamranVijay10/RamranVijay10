@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="195" viewBox="0 0 400 195">
+  <defs>
+    <linearGradient id="bgS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+    <linearGradient id="barGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <filter id="glowS">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .sText { font-family: -apple-system, 'Segoe UI', Arial, sans-serif; }
+      .statBar { animation: growBar 1.5s ease-out forwards; transform-origin: left; }
+      @keyframes growBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+      .statNum { animation: countUp 1.5s ease-out forwards; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="195" fill="url(#bgS)" rx="14"/>
+  <rect width="400" height="195" rx="14" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="20" y="32" class="sText" font-size="15" font-weight="700" fill="white">📊 GitHub Stats</text>
+  <text x="20" y="48" class="sText" font-size="10" fill="#64748b">@RamranVijay10</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="58" x2="380" y2="58" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Stat items -->
+  <!-- Total Stars -->
+  <text x="20" y="80" class="sText" font-size="11" fill="#94a3b8">⭐ Total Stars Earned</text>
+  <rect x="20" y="86" width="250" height="6" rx="3" fill="#1e3a5f"/>
+  <rect class="statBar" x="20" y="86" width="90" height="6" rx="3" fill="url(#barGrad1)"/>
+  <text x="280" y="95" class="sText" font-size="12" font-weight="700" fill="#00d2ff">42</text>
+
+  <!-- Total Commits -->
+  <text x="20" y="112" class="sText" font-size="11" fill="#94a3b8">💻 Total Commits (2024)</text>
+  <rect x="20" y="118" width="250" height="6" rx="3" fill="#1e3a5f"/>
+  <rect class="statBar" x="20" y="118" width="180" height="6" rx="3" fill="url(#barGrad1)" style="animation-delay: 0.2s"/>
+  <text x="280" y="127" class="sText" font-size="12" font-weight="700" fill="#a78bfa">340+</text>
+
+  <!-- Total PRs -->
+  <text x="20" y="144" class="sText" font-size="11" fill="#94a3b8">🔀 Pull Requests</text>
+  <rect x="20" y="150" width="250" height="6" rx="3" fill="#1e3a5f"/>
+  <rect class="statBar" x="20" y="150" width="70" height="6" rx="3" fill="url(#barGrad1)" style="animation-delay: 0.4s"/>
+  <text x="280" y="159" class="sText" font-size="12" font-weight="700" fill="#06ffa5">28</text>
+
+  <!-- Total Repos -->
+  <text x="20" y="176" class="sText" font-size="11" fill="#94a3b8">📁 Public Repos</text>
+  <rect x="20" y="182" width="250" height="6" rx="3" fill="#1e3a5f"/>
+  <rect class="statBar" x="20" y="182" width="120" height="6" rx="3" fill="url(#barGrad1)" style="animation-delay: 0.6s"/>
+  <text x="280" y="191" class="sText" font-size="12" font-weight="700" fill="#00d2ff">15+</text>
+
+  <!-- Rank badge -->
+  <circle cx="358" cy="105" r="32" fill="#0a1628" stroke="#00d2ff" stroke-width="1.5" opacity="0.9"/>
+  <text x="358" y="99" text-anchor="middle" class="sText" font-size="10" fill="#64748b">Rank</text>
+  <text x="358" y="115" text-anchor="middle" class="sText" font-size="16" font-weight="900" fill="url(#barGrad1)" filter="url(#glowS)">B+</text>
+</svg>
